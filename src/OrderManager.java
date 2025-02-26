@@ -37,7 +37,8 @@ public class OrderManager {
             Thread.sleep(3000); // Simulate processing time
             order.setOrderStatus(OrderStatus.SHIPPED);
             System.out.println("Order shipped: " + order);
-
+            System.out.println("Order shipped: " + order);
+         // /asdfg
             Thread.sleep(3000);
             order.setOrderStatus(OrderStatus.DELIVERED);
             System.out.println("Order delivered: " + order);
@@ -45,6 +46,7 @@ public class OrderManager {
             e.printStackTrace();
         }
     }
+ // add procss
 
 
 }
