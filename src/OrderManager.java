@@ -29,7 +29,6 @@ public class OrderManager {
             System.out.println("Insufficient stock for product: " + product.getName());
         }
     }
-
     private void processOrder(Order order) {
         try {
             Thread.sleep(3000); // Simulate processing time
