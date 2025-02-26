@@ -29,9 +29,20 @@ public class OrderManager {
             System.out.println("Insufficient stock for product: " + product.getName());
         }
     }
-    public void processOrder(Order order) {
-        System.out.println("Processing order: " + order.getOrderId());
-        order.setOrderStatus(OrderStatus.SHIPPED);
-    }
 
+
+
+    private void processOrder(Order order) {
+        try {
+            Thread.sleep(3000); // Simulate processing time
+            order.setOrderStatus(OrderStatus.SHIPPED);
+            System.out.println("Order shipped: " + order);
+
+            Thread.sleep(3000);
+            order.setOrderStatus(OrderStatus.DELIVERED);
+            System.out.println("Order delivered: " + order);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
